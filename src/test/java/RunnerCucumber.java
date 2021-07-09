@@ -9,7 +9,6 @@ import org.testng.annotations.DataProvider;
         features = {"src/test/java/Features"}, //FolderName
         tags="@Test"
 )
-
 public class RunnerCucumber extends AbstractTestNGCucumberTests {
 
     @DataProvider(parallel = false)

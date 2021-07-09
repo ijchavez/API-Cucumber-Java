@@ -1,21 +1,42 @@
 package Steps;
 
-import PageObject.LandingPage;
-import PageObject.PremiumPage;
-import PageObject.RegistrationPage;
-
 import PageObject.BasePage;
 import io.restassured.response.Response;
-import org.openqa.selenium.WebDriver;
 
 public class BaseSteps extends BasePage {
     /** Aca van las pages decladadras:
      * public XxxPage xxxPage;
      * **/
-    public WebDriver driver;
-    public LandingPage landingPage;
-    public PremiumPage premiumPage;
-    public RegistrationPage registrationPage;
     public Response response;
     public String responseBody = "";
+
+    public BaseSteps(String aResponseBody, Response aResponse){
+        this.responseBody = aResponseBody;
+        this.response = aResponse;
+
+    }
+    public BaseSteps(){
+
+    }
+    public void setResponseBody(String aResponseBody){
+        this.responseBody = aResponseBody;
+
+    }
+    public void setResponse(Response aResponse){
+        this.response = aResponse;
+
+    }
+    public String getResponseBody(){
+        return this.responseBody;
+
+    }
+    public Response getResponse(){
+        return this.response;
+
+    }
+    public String toString(){
+        return this.responseBody;
+
+    }
+
 }

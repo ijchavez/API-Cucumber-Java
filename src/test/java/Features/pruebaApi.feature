@@ -7,4 +7,4 @@ Feature: Consulta de Despacho
     Then verifico que el responseCode sea <responseCode> y la consulta tarde menos de <responseTime> ms
     Examples:
       |responseCode|responseTime|
-      |         201|       20000|
+      |         200|        5000|
